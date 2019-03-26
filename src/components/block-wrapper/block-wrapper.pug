@@ -1,0 +1,29 @@
+- blocks = {};
+
+mixin block-wrapper(options, isHero)
+    block
+    if (isHero)
+        //- Структура для главного блока  
+        .hero-block
+            .block-header
+                h1.hero-block__title= options.title
+            .hero-block__content
+                if blocks['text-component']
+                    - blocks['text-component']()
+                if blocks['other-component']
+                    - blocks['other-component']()
+    else
+        //- Структура для основного блока
+        .swiper-block-content
+            .block-header
+                h2.block-header__block-headline= options.title
+        .block-content
+            if blocks['text-component']
+                - blocks['text-component']()
+            if blocks['other-component']
+                - blocks['other-component']()
+    +set-block("icon")
+    +set-block("component")
+
+mixin set-block(key)
+    - blocks[key] = this.block
