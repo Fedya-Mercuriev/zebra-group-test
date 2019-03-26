@@ -1,29 +1,28 @@
 - blocks = {};
 
-mixin block-wrapper(options, isHero)
+mixin block-wrapper(title, isHero= false)
     block
     if (isHero)
         //- Структура для главного блока  
         .hero-block
             .block-header
-                h1.hero-block__title= options.title
+                h1.hero-block__title= title
             .hero-block__content
-                if blocks['text-component']
-                    - blocks['text-component']()
-                if blocks['other-component']
-                    - blocks['other-component']()
+                - for (var block in blocks)
+                    - blocks[block]()
+                //- В конце прохождения каждого цикла очищает объект с блоками 
+                //- во избежание дублирования
+                -blocks = {}
     else
         //- Структура для основного блока
         .swiper-block-content
             .block-header
-                h2.block-header__block-headline= options.title
-        .block-content
-            if blocks['text-component']
-                - blocks['text-component']()
-            if blocks['other-component']
-                - blocks['other-component']()
-    +set-block("icon")
-    +set-block("component")
+                h2.block-header__block-headline= title
+            .block-content
+                - for (var block in blocks)
+                    - blocks[block]()
+                -blocks = {}
+    
 
 mixin set-block(key)
     - blocks[key] = this.block
