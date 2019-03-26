@@ -4,7 +4,11 @@
     "description": "Тестовое заданеи для Zebra Group",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "webpack --mode=production",
+        "build:dev": "webpack --mode=development",
+        "start:dev": "webpack-dev-server --mode=development",
+        "dev": "webpack --watch --mode development",
+        "prod": "webpack --mode production"
     },
     "repository": {
         "type": "git",
