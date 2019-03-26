@@ -5,6 +5,7 @@ include ./../components/buttons/regular-btn/regular-btn.pug
 
 .swiper-container    
     .swiper-wrapper
+        // Начало меню сайта
         +page-navigation([
             {
                 text: 'home',
@@ -26,7 +27,8 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                 icon: 'fal fa-envelope' 
             }
         ])
-        // Начало hero-блока
+        // Конец меню сайта
+        // Начало hero-слайда
         .swiper-slide
             +block-wrapper({
                 title: 'Meet Perth,',
@@ -44,7 +46,8 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'white',
                         icon: 'fas fa-cloud-download-alt'
                     })
-        // Конец hero-блока
+        // Конец hero-слайда
+        // Начало слайда #2
         .swiper-slide
             +block-wrapper({
                 title: 'A Longwinded Header',
@@ -69,6 +72,8 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'green',
                         icon: 'fas fa-envelope'
                     })
+        // Конец слайда #2
+        // Начало слайда #3
         .swiper-slide
             +block-wrapper({
                 title: 'Get a Dog Up Ya\’',
@@ -91,6 +96,8 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'pink',
                         icon: 'fab fa-dribbble'
                     })
+        // Конец слайда #3
+        // Начало слайда #4
         .swiper-slide
             +block-wrapper({
                 title: 'Like What You See?',
@@ -104,6 +111,8 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'white',
                         icon: 'i class="fas fa-beer'
                     })
+        // Конец слайда #4
+        // Начало слайда #5
         .swiper-slide
             +block-wrapper({
                 bg: 'white'
@@ -113,3 +122,4 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                     | © 2013  
                     a.footer__author-link(href="#") Perth.
                     |  Breeding pixels since the naughties.
+        // Конец слайда #5                                
