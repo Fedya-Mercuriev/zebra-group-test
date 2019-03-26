@@ -1,0 +1,115 @@
+include ./../components/page-navigation/page-navigation.pug
+include ./../components/block-wrapper/block-wrapper.pug 
+include ./../components/text-component/text-block.pug
+include ./../components/buttons/regular-btn/regular-btn.pug
+
+.swiper-container    
+    .swiper-wrapper
+        +page-navigation([
+            {
+                text: 'home',
+                link: '#',
+                icon: 'fas fa-home'
+            }, 
+            {
+               text: 'about me',
+                link: '#',
+                icon: 'far fa-heart' 
+            },
+            {
+               text: 'portfolio',
+                link: '#',
+                icon: 'fas fa-desktop' 
+            }, {
+                text: 'drop me a line',
+                link: '#',
+                icon: 'fal fa-envelope' 
+            }
+        ])
+        // Начало hero-блока
+        .swiper-slide
+            +block-wrapper({
+                title: 'Meet Perth,',
+                textColor: 'light',
+                bg: 'blue'
+            }, true)
+                +set-block('text-block')
+                    +text-block({
+                        text: 'A stupidly simple, flat PSD. Oh yeah, it’s free too!', 
+                        type: 'hero-text'})
+                +set-block('button')
+                    +regular-btn({
+                        text: 'DOWNLOAD',
+                        link: '#',
+                        color: 'white',
+                        icon: 'fas fa-cloud-download-alt'
+                    })
+        // Конец hero-блока
+        .swiper-slide
+            +block-wrapper({
+                title: 'A Longwinded Header',
+                textColor: 'dark',
+                bg: 'grey'
+            })
+                +set-block('text-block')
+                    +text-block({
+                        text: "She'll be right paddock how lets throw a ciggies. She'll be right ute to built like a doovalacky. We're going rack off bloody she'll be right pash. You little ripper tucker also get a dog up ya greenie.",
+                        type: 'regular'
+                    })
+                +set-block('text-block-with-ribbon')
+                    +text-block({
+                        text: "You little ripper boozer no worries she'll be right holy dooley!. Come a freo also as cross as a your shout. Lets throw a khe sanh flamin dead dingo's donger. Lets get some fisho with grab us a trackie dacks.",
+                        type: 'with-ribbon',
+                        'ribbon-color': 'blue'
+                    })
+                +set-block('button')
+                    +text-block({
+                        text: 'SAY HELLO',
+                        link: '#',
+                        color: 'green',
+                        icon: 'fas fa-envelope'
+                    })
+        .swiper-slide
+            +block-wrapper({
+                title: 'Get a Dog Up Ya\’',
+                textColor: 'dark',
+                bg: 'white'
+            })
+                +set-block('emphasized-text')
+                    +text-block({
+                        text: "She'll be right paddock how lets throw a ciggies. She'll be right ute to built like a doovalacky.",
+                        type: 'emphasized-text'
+                    })
+                +set-block('regular-text')
+                    +text-block({
+                        text: "We're going rack off bloody she'll be right pash. You little ripper tucker also get a dog up ya greenie."
+                    })
+                +set-block('button')
+                    +text-block({
+                        text: 'VIEW ON DRIBBLE',
+                        link: '#',
+                        color: 'pink',
+                        icon: 'fab fa-dribbble'
+                    })
+        .swiper-slide
+            +block-wrapper({
+                title: 'Like What You See?',
+                textColor: 'light',
+                bg: 'green'
+            })
+                +set-block('button')
+                    +regular-btn({
+                        text: 'BUY ME A BEER?',
+                        link: '#',
+                        color: 'white',
+                        icon: 'i class="fas fa-beer'
+                    })
+        .swiper-slide
+            +block-wrapper({
+                bg: 'white'
+            })
+            div.footer
+                p.footer__text
+                    | © 2013  
+                    a.footer__author-link(href="#") Perth.
+                    |  Breeding pixels since the naughties.
