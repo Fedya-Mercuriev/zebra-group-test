@@ -1,0 +1,9 @@
+mixin regular-btn(options)
+    //- Параметры: text (текст кнопки), link (ссылка на ресурс), color(цвет текста, бортиков, иконки), 
+    //- icon (название иконки на fontAwesome)
+    - baseClass = 'regular-btn';
+    - classList = `${baseClass} ${baseClass}--color-${options.color}`
+    a(class=classList href=options.link role="button")
+        span.regular-btn__text= options.text
+        i(class=options.icon)
+    
