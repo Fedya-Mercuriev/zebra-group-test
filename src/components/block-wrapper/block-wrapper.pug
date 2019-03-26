@@ -1,12 +1,16 @@
 - blocks = {};
 
-mixin block-wrapper(title, isHero= false)
+mixin block-wrapper(options, isHero= false)
     block
     if (isHero)
+        - baseClassName = 'hero-block';
+        - classList = (options.textColor === 'light') ? `${baseClassName} ${baseClassName}--light-text` : baseClassName;
+        - classList += ` ${baseClassName}--bg-${options.bg}`
         //- Структура для главного блока  
-        .hero-block
-            .block-header
-                h1.hero-block__title= title
+        div(class= classList)
+            if (options.title)
+                .block-header   
+                    h1.hero-block__title= options.title
             .hero-block__content
                 - for (var block in blocks)
                     - blocks[block]()
@@ -14,10 +18,14 @@ mixin block-wrapper(title, isHero= false)
                 //- во избежание дублирования
                 -blocks = {}
     else
+        - baseClassName = 'slide-content';
+        - classList = (options.textColor === 'light') ? `${baseClassName} ${baseClassName}--light-text` : baseClassName;
+        - classList += ` ${baseClassName}--bg-${options.bg}`
         //- Структура для основного блока
-        .swiper-block-content
-            .block-header
-                h2.block-header__block-headline= title
+        div(class= classList)
+            if (options.title)
+                .block-header
+                    h2.block-header__block-headline= options.title
             .block-content
                 - for (var block in blocks)
                     - blocks[block]()
