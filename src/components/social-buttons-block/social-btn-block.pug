@@ -1,0 +1,9 @@
+include ./../buttons/social-btn/social-btn.pug
+
+mixin social-btn-block(socialButtonsArr)
+    //- Миксин принимает массив кнопок, а затем вызывает миксин, передвавая ему
+    //- извлеченный объект
+    .social-buttons-wrapper
+        each socialBtn in socialButtonsArr
+            +social-btn(socialBtn)
+
