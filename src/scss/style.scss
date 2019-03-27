@@ -4,3 +4,12 @@
 @import "fa-assets/solid.scss";
 @import "fa-assets/regular.scss";
 @import "fa-assets/brands.scss";
+@import "../components/page-navigation/page-navigation.scss";
+body {
+    padding-top: 9px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
