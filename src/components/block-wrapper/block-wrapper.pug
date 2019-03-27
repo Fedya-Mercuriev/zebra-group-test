@@ -1,6 +1,10 @@
 - blocks = {};
 
 mixin block-wrapper(options, isHero= false)
+    //- Свойства opions:
+    //- @bg (задает класс, по которому блоку будет применяться определенный фон)
+    //- @title (загловок для блока)
+    //- Свойство @hero определеяет является ли блок главным на странице
     block
     if (isHero)
         - baseClassName = 'hero-block';

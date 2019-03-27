@@ -1,6 +1,9 @@
 mixin regular-btn(options)
-    //- Параметры: text (текст кнопки), link (ссылка на ресурс), color(цвет текста, бортиков, иконки), 
-    //- icon (название иконки на fontAwesome)
+    //- Свойства options:
+    //- @text (текст кнопки), 
+    //- @link (ссылка на ресурс), 
+    //- @color(цвет текста, бортиков, иконки), 
+    //- @icon (название иконки на fontAwesome)
     - baseClassName = 'regular-btn';
     - classList = `${baseClassName} ${baseClassName}--color-${options.color}`
     a(class=classList href=options.link)
