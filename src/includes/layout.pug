@@ -1,10 +1,19 @@
 include ./../components/page-navigation/page-navigation.pug
 include ./../components/block-wrapper/block-wrapper.pug 
+include ./../components/aside-img/aside-img.pug
 include ./../components/text-component/text-block.pug
 include ./../components/buttons/regular-btn/regular-btn.pug
+include ./../components/social-buttons-block/social-btn-block.pug 
+include ./../components/buttons/floating-action-btn/floating-action-btn.pug
+include ./../components/buttons/submit-btn/submit-btn.pug
+include ./../components/form/form.pug
+include ./../components/form/inputs/input-text.pug
 
 .swiper-container    
     .swiper-wrapper
+        +floating-action-btn({
+            icon: 'fas fa-chevron-up'
+        })
         // Начало меню сайта
         +page-navigation([
             {
@@ -28,6 +37,7 @@ include ./../components/buttons/regular-btn/regular-btn.pug
             }
         ])
         // Конец меню сайта
+
         // Начало hero-слайда
         .swiper-slide
             +block-wrapper({
@@ -46,7 +56,12 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'white',
                         icon: 'fas fa-cloud-download-alt'
                     })
+                +set-block('aside-img')
+                    +aside-img({
+                        imgName: 'iphone'
+                    })
         // Конец hero-слайда
+
         // Начало слайда #2
         .swiper-slide
             +block-wrapper({
@@ -72,7 +87,12 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'green',
                         icon: 'fas fa-envelope'
                     })
+                +set-block('aside-img')
+                    +aside-img({
+                        imgName: 'ipad'
+                    })
         // Конец слайда #2
+
         // Начало слайда #3
         .swiper-slide
             +block-wrapper({
@@ -96,7 +116,12 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         color: 'pink',
                         icon: 'fab fa-dribbble'
                     })
+                +set-block('aside-img')
+                    +aside-img({
+                        imgName: 'devices'
+                    })
         // Конец слайда #3
+
         // Начало слайда #4
         .swiper-slide
             +block-wrapper({
@@ -112,11 +137,54 @@ include ./../components/buttons/regular-btn/regular-btn.pug
                         icon: 'i class="fas fa-beer'
                     })
         // Конец слайда #4
+
         // Начало слайда #5
         .swiper-slide
             +block-wrapper({
                 bg: 'white'
             })
+                +set-block('social-buttons')
+                    +social-btn-block([
+                        {
+                            text: 'dribbble',
+                            link: 'https://dribbble.com/',
+                            icon: 'fab fa-dribbble'
+                        },
+                        {
+                            text: 'facebook',
+                            link: 'https://facebook.com/',
+                            icon: 'fab fa-facebook-f'
+                        },
+                        {
+                            text: 'twitter',
+                            link: 'https://twitter.com/',
+                            icon: 'fab fa-twitter'
+                        },
+                        {
+                            text: 'mail',
+                            link: 'https://mail.google.com',
+                            icon: 'far fa-paper-plane'
+                        }
+                    ])
+                +set-block('subscription-form')
+                    +form({
+                        purpose: 'subscribe-newsletter',
+                        method: 'get',
+                        action: '#'
+                    })
+                        +input-text({
+                                purpose: 'enter-email',
+                                type: 'text',
+                                labelText: 'Newsletter Subscription',
+                                placeholder: 'Enter Email',
+                                name: 'email',
+                                value: ''
+                            })
+                        +submit-btn({
+                            icon: 'fas fa-envelope',
+                            aboveInput: true
+                        })
+                        
             div.footer
                 p.footer__text
                     | © 2013  
