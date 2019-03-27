@@ -1,2 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 // Local fonts
+@include font-face('Blackjack',
+'../fonts/blackjack-webfont',
+null,
+null,
+ttf eot woff svg);
