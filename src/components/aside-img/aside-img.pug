@@ -1,0 +1,7 @@
+mixin aside-img(options)
+    //- Свойства options:
+    //- @imgName (название используемой картинки – записывается в класс, 
+    //- по нему через background-image будет устанавливаться картинка)
+    - baseClassName = 'aside-img';
+    - classList = `${baseClassName} ${baseClassName}--${options.imgName}`
+    div(class=classList)
