@@ -1,0 +1,8 @@
+mixin form(options)
+    //- Свойства options: 
+    //- @method (устанавливает метод отправки данных)
+    //- @action (устанавливает значение для аттрибута action)
+    //- @purpose (служит для улучшения читаемости, а также задает класс)
+    if block
+        form(class=options.purpose method=options.method action=options.action)
+            block

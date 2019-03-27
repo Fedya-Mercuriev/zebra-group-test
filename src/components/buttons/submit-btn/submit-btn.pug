@@ -1,0 +1,15 @@
+mixin submit-btn(options)
+    //- Свойства options:
+    //- @text (устанавливает текст кнопки (не обязательно))
+    //- @icon (устанавливает иконку кнопки (не обязательно))
+    //- @aboveInput (если true, тогда абсолютно позиционируется и помещается над инпутом)
+    - baseClassName = 'submit-btn';
+    - classList = (options.aboveInput) ? `${baseClassName} ${baseClassName}--above-input` : baseClassName;
+    if (options.btnText && options.icon)
+        button(type='submit' class=classList)= options.btnText
+            i(class=options.icon)
+    else if (options.btnText)
+        button(type='submit' class=classList)= options.btnText
+    else 
+        button(type='submit' class=classList)
+            i(class=options.icon)        

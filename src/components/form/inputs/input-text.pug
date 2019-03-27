@@ -1,0 +1,12 @@
+mixin input-text(options)
+    //- Свойства options: 
+    //- @type (устанавливает тип инпута),
+    //- @purpose (служит для улучшения читаемости, 
+    //- чтоб можно было понять для чего инпут, а также устанавливает id),
+    //- @labelText (устанавливает текст для элемента label),
+    //- @placeholder (устанавливает текст для placeholder-а),
+    //- @name и @value (устанавливают значения для аттрибутов name/value),
+    label(for=options.purpose)= options.labelText
+    - baseClassName = 'text-input'
+    div(class=`${baseClassName}-wrapper`)
+        input(class=baseClassName type=options.type id=options.purpose placeholder=options.placeholder name=options.name value=options.value)
