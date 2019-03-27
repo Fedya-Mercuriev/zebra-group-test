@@ -1,4 +1,8 @@
 mixin social-btn(options)
+    //- Свойства options: 
+    //- @link (устанавливает ссылкуна соц-сеть)
+    //- @icon (устанавливает иконку)
+    //- @text (текст кнопки)
     - baseClassName = 'social-btn';
-    a(class=`${baseClassName}`)
+    a(class=`${baseClassName}` href=options.link)= options.text
         i(class=`${baseClassName}__icon ${options.icon}`)
