@@ -1,11 +1,11 @@
 mixin text-block(options)
     if (options.type === 'hero-text')
-        p.hero-text= options.text
+        p.hero-text!= options.text
     else if (options.type === 'with-ribbon')
         - baseClassName = 'text-block-with-ribbon';
         div.text-block-with-ribbon(class=`${baseClassName}--ribbon-${options['ribbon-color']}`)
-            p.text-block-with-ribbon__text-content= options.text
+            p.text-block-with-ribbon__text-content!= options.text
     else if (options.type === 'emphasized-text')
-        em.exphasized-text-block= options.text
+        em.exphasized-text-block!= options.text
     else
-        p.text-block= options.text
+        p.text-block!= options.text
