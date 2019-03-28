@@ -83,10 +83,6 @@ module.exports = (_, argv) => {
                 filename: 'index.html',
                 inject: true,
                 hash: true,
-                meta: {
-                    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-                    charset: 'utf-8'
-                },
                 template: 'src/index.pug',
             }),
             new WebpackMd5Hash()
