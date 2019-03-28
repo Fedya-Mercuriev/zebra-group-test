@@ -9,36 +9,36 @@ include ./../components/buttons/submit-btn/submit-btn.pug
 include ./../components/form/form.pug
 include ./../components/form/inputs/input-text.pug
 
-.swiper-container    
-    .swiper-wrapper
-        +floating-action-btn({
+.swiper-container  
+    +floating-action-btn({
             icon: 'fas fa-chevron-up'
         })
-        // Начало меню сайта
-        +page-navigation([
-            {
-                text: 'home',
-                link: '#',
-                icon: 'fas fa-home'
-            }, 
-            {
-               text: 'about me',
-                link: '#',
-                icon: 'far fa-heart' 
-            },
-            {
-               text: 'portfolio',
-                link: '#',
-                icon: 'fas fa-desktop' 
-            }, {
-                text: 'drop me a line',
-                link: '#',
-                icon: 'far fa-envelope' 
-            }
-        ])
-            include ./../img/logo.svg
+    // Начало меню сайта
+    +page-navigation([
+        {
+            text: 'home',
+            link: '#',
+            icon: 'fas fa-home'
+        }, 
+        {
+            text: 'about me',
+            link: '#',
+            icon: 'far fa-heart' 
+        },
+        {
+            text: 'portfolio',
+            link: '#',
+            icon: 'fas fa-desktop' 
+        }, 
+        {
+            text: 'drop me a line',
+            link: '#',
+            icon: 'far fa-envelope' 
+        }
+    ])
+        include ./../img/logo.svg
         // Конец меню сайта
-
+    .swiper-wrapper
         // Начало hero-слайда
         .swiper-slide
             +block-wrapper({
