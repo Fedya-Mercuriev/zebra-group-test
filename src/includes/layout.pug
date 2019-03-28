@@ -8,6 +8,8 @@ include ./../components/buttons/floating-action-btn/floating-action-btn.pug
 include ./../components/buttons/submit-btn/submit-btn.pug
 include ./../components/form/form.pug
 include ./../components/form/inputs/input-text.pug
+include ./../components/footer/footer.pug
+
 
 .swiper-container  
     +floating-action-btn({
@@ -194,10 +196,7 @@ include ./../components/form/inputs/input-text.pug
                                     icon: 'fas fa-envelope',
                                     aboveInput: true
                                 })
-                        
-            div.footer
-                p.footer__text
-                    | © 2013  
-                    a.footer__author-link(href="#") Perth.
-                    |  Breeding pixels since the naughties.
+            +footer({
+                text: '© 2013 <a href="#">Perth.</a> Breeding pixels since the naughties.'
+            })
         // Конец слайда #5                                
