@@ -85,7 +85,11 @@ module.exports = (_, argv) => {
                 hash: true,
                 template: 'src/index.pug',
             }),
-            new WebpackMd5Hash()
+            new WebpackMd5Hash(),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery"
+            })
         ]
     };
 
