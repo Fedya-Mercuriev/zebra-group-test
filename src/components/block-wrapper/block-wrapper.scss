@@ -6,14 +6,23 @@
     &__title {
         @include reset-pad-marg();
         margin-bottom: 59px;
-        font-size: 93px;
+        font-size: 3em;
         line-height: 100%;
         font-family: "Blackjack", sans-serif;
+        @include media(map-deep-get($devices, "mobile-l")) {
+            font-size: 3.125em;
+        }
+        @include media(map-deep-get($devices, "tablet")) {
+            font-size: 4.375em;
+        }
     }
     &__content {
         max-width: $max-container-width;
         margin: 0 auto;
-        text-align: right;
+        text-align: center;
+        @include media(map-deep-get($devices, "desktop")) {
+            text-align: right;
+        }
     }
     &--light-text {
         color: $light-text-color;
@@ -35,9 +44,13 @@
 .slide-content {
     $block-base-class: 'slide-content';
     position: relative;
-    text-align: right;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     color: $dark-text-color;
+    text-align: center;
+    @include media(map-deep-get($devices, "desktop")) {
+        text-align: right;
+    }
     &--light-text {
         .#{$block-base-class}__block-headline {
             color: $light-text-color;
@@ -68,5 +81,8 @@
 .block-header {
     max-width: $max-container-width;
     margin: 0 auto;
-    text-align: right;
+    text-align: center;
+    @include media(map-deep-get($devices, "desktop")) {
+        text-align: right;
+    }
 }
