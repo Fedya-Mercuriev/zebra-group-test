@@ -9,6 +9,7 @@
 @import "../components/text-component/text-block.scss";
 @import "../components/buttons/floating-action-btn/floating-action-btn.scss";
 @import "../components/buttons/regular-btn/regular-btn.scss";
+@import "../components/buttons/social-btn/social-btn.scss";
 html {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -44,4 +45,14 @@ body {
     &:last-child {
         background-color: $bg-grey;
     }
+}
+
+.social-buttons-wrapper {
+    margin-bottom: 67px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

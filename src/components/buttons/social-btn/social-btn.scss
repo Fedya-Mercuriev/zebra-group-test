@@ -1,0 +1,32 @@
+.social-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 56px;
+    height: 56px;
+    border: 2px solid $social-btn-regular-state;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 0px;
+    color: $social-btn-regular-state;
+    text-align: center;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        border: 2px solid $social-btn-hover-state;
+        color: $social-btn-hover-state;
+    }
+    @include media(map-deep-get($devices, "tablet")) {
+        margin-right: 35px;
+    }
+    &__icon {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 19px;
+        vertical-align: middle;
+    }
+}
