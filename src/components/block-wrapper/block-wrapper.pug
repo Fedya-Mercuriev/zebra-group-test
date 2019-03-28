@@ -31,7 +31,7 @@ mixin block-wrapper(options, isHero= false)
             .block-content-wrapper
                 if (options.title)
                     .block-header
-                        h2.block-header__block-headline= options.title
+                        h2.slide-content__block-headline= options.title
                 .block-content
                     - for (var block in blocks)
                         - blocks[block]()
