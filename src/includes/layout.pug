@@ -39,12 +39,15 @@ include ./../components/form/inputs/input-text.pug
         include ./../img/logo.svg
         // Конец меню сайта
     .swiper-wrapper
+        - slideClassName = 'swiper-slide';
         // Начало hero-слайда
         .swiper-slide
             +block-wrapper({
                 title: 'Meet Perth,',
                 textColor: 'light',
-                bg: 'blue'
+                slideNumber: '1',
+                alignItems: 'right',
+                textOrientation: 'right'
             }, true)
                 +set-block('text-block')
                     +text-block({
@@ -68,7 +71,9 @@ include ./../components/form/inputs/input-text.pug
             +block-wrapper({
                 title: 'A Longwinded Header',
                 textColor: 'dark',
-                bg: 'grey'
+                slideNumber: '2',
+                alignItems: 'left',
+                textOrientation: 'left'
             })
                 +set-block('text-block')
                     +text-block({
@@ -99,7 +104,9 @@ include ./../components/form/inputs/input-text.pug
             +block-wrapper({
                 title: 'Get a Dog Up Ya\’',
                 textColor: 'dark',
-                bg: 'white'
+                slideNumber: '3',
+                alignItems: 'right',
+                textOrientation: 'left'
             })
                 +set-block('emphasized-text')
                     +text-block({
@@ -128,7 +135,9 @@ include ./../components/form/inputs/input-text.pug
             +block-wrapper({
                 title: 'Like What You See?',
                 textColor: 'light',
-                bg: 'green'
+                alignItems: 'center',
+                textOrientation: 'center',
+                boldText: true
             })
                 +set-block('button')
                     +regular-btn({
@@ -142,7 +151,7 @@ include ./../components/form/inputs/input-text.pug
         // Начало слайда #5
         .swiper-slide
             +block-wrapper({
-                bg: 'grey'
+                alignItems: 'center'
             })
                 +set-block('social-buttons')
                     +social-btn-block([
