@@ -20,6 +20,19 @@
     margin: 0;
 }
 
+@mixin clearfix() {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@mixin text-default-style() {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5625;
+}
+
 @mixin fluid-type($min-vw,
 $max-vw,
 $min-font-size,

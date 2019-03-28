@@ -1,0 +1,97 @@
+// Стили дял обертки (устанавливает ширину, выравнивает дочерние элементы, выравнивает текст внутри дочерних элементов)
+.block-content-wrapper {
+    max-width: $max-container-width;
+    margin: 0 auto;
+    // Правила для выравнивания дочерних элементов
+    &--align-items-left {
+        text-align: left
+    }
+    &--align-items-center {
+        text-align: center;
+    }
+    &--align-items-right {
+        text-align: right;
+    }
+    &__container {
+        display: inline-block;
+        width: 100%;
+        // Правила для выравнивания текста дочерних элементов
+        &--align-text-left {
+            text-align: center;
+            @include media(map-deep-get($devices, "desktop")) {
+                text-align: left;
+            }
+        }
+        &--align-text-center {
+            text-align: center;
+        }
+        &--align-text-right {
+            text-align: center;
+            @include media(map-deep-get($devices, "desktop")) {
+                text-align: right;
+            }
+        }
+        &--light-text {
+            color: $light-text-color;
+        }
+        &--dark-text {
+            color: $dark-text-color;
+        }
+    }
+}
+
+// Индивидуальные настройки ширины для контента с текстом
+.slide-number-2 {
+    .block-content-wrapper__container {
+        @include media(map-deep-get($devices, "desktop")) {
+            max-width: 570px;
+        }
+    }
+}
+
+.slide-number-3 {
+    .block-content-wrapper__container {
+        @include media(map-deep-get($devices, "desktop")) {
+            max-width: 406px;
+        }
+    }
+}
+
+// Стиль для заголовка главного блока
+.main-block-title {
+    @include reset-pad-marg();
+    margin-bottom: 40px;
+    font-size: 3em;
+    font-family: 'Blackjack', sans-serif;
+    @include media(map-deep-get($devices, "desktop")) {
+        margin-bottom: 59px;
+        font-size: 4.375em;
+    }
+}
+
+// Стиль для обычного заголовка
+.block-headline {
+    @include reset-pad-marg();
+    padding: 0 0.5em;
+    margin-bottom: 39px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.8em;
+    color: inherit;
+    &--bold {
+        font-weight: 400;
+    }
+    @include media(map-deep-get($devices, "desktop")) {
+        padding: 0;
+        margin-bottom: 49px;
+        font-size: 2.5em;
+    }
+}
+
+// Стиль для контента блока
+.block-content {
+    text-align: center;
+    @include media(map-deep-get($devices, "desktop")) {
+        text-align: inherit;
+    }
+}

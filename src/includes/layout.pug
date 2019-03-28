@@ -8,47 +8,52 @@ include ./../components/buttons/floating-action-btn/floating-action-btn.pug
 include ./../components/buttons/submit-btn/submit-btn.pug
 include ./../components/form/form.pug
 include ./../components/form/inputs/input-text.pug
+include ./../components/footer/footer.pug
 
-.swiper-container    
-    .swiper-wrapper
-        +floating-action-btn({
+
+.swiper-container  
+    +floating-action-btn({
             icon: 'fas fa-chevron-up'
         })
-        // Начало меню сайта
-        +page-navigation([
-            {
-                text: 'home',
-                link: '#',
-                icon: 'fas fa-home'
-            }, 
-            {
-               text: 'about me',
-                link: '#',
-                icon: 'far fa-heart' 
-            },
-            {
-               text: 'portfolio',
-                link: '#',
-                icon: 'fas fa-desktop' 
-            }, {
-                text: 'drop me a line',
-                link: '#',
-                icon: 'far fa-envelope' 
-            }
-        ])
-            include ./../img/logo.svg
+    // Начало меню сайта
+    +page-navigation([
+        {
+            text: 'home',
+            link: '#',
+            icon: 'fas fa-home'
+        }, 
+        {
+            text: 'about me',
+            link: '#',
+            icon: 'far fa-heart' 
+        },
+        {
+            text: 'portfolio',
+            link: '#',
+            icon: 'fas fa-desktop' 
+        }, 
+        {
+            text: 'drop me a line',
+            link: '#',
+            icon: 'far fa-envelope' 
+        }
+    ])
+        include ./../img/logo.svg
         // Конец меню сайта
-
+    .swiper-wrapper
+        - slideClassName = 'swiper-slide';
         // Начало hero-слайда
         .swiper-slide
             +block-wrapper({
                 title: 'Meet Perth,',
                 textColor: 'light',
-                bg: 'blue'
+                slideNumber: '1',
+                alignItems: 'right',
+                textOrientation: 'right'
             }, true)
                 +set-block('text-block')
                     +text-block({
-                        text: 'A stupidly simple, flat PSD. Oh yeah, it’s free too!', 
+                        text: 'A stupidly simple, flat PSD. Oh yeah, it’s <em>free</em> too!', 
                         type: 'hero-text'})
                 +set-block('button')
                     +regular-btn({
@@ -68,7 +73,9 @@ include ./../components/form/inputs/input-text.pug
             +block-wrapper({
                 title: 'A Longwinded Header',
                 textColor: 'dark',
-                bg: 'grey'
+                slideNumber: '2',
+                alignItems: 'left',
+                textOrientation: 'left'
             })
                 +set-block('text-block')
                     +text-block({
@@ -82,7 +89,7 @@ include ./../components/form/inputs/input-text.pug
                         'ribbon-color': 'blue'
                     })
                 +set-block('button')
-                    +text-block({
+                    +regular-btn({
                         text: 'SAY HELLO',
                         link: '#',
                         color: 'green',
@@ -99,7 +106,9 @@ include ./../components/form/inputs/input-text.pug
             +block-wrapper({
                 title: 'Get a Dog Up Ya\’',
                 textColor: 'dark',
-                bg: 'white'
+                slideNumber: '3',
+                alignItems: 'right',
+                textOrientation: 'left'
             })
                 +set-block('emphasized-text')
                     +text-block({
@@ -111,7 +120,7 @@ include ./../components/form/inputs/input-text.pug
                         text: "We're going rack off bloody she'll be right pash. You little ripper tucker also get a dog up ya greenie."
                     })
                 +set-block('button')
-                    +text-block({
+                    +regular-btn({
                         text: 'VIEW ON DRIBBLE',
                         link: '#',
                         color: 'pink',
@@ -128,7 +137,9 @@ include ./../components/form/inputs/input-text.pug
             +block-wrapper({
                 title: 'Like What You See?',
                 textColor: 'light',
-                bg: 'green'
+                alignItems: 'center',
+                textOrientation: 'center',
+                boldText: true
             })
                 +set-block('button')
                     +regular-btn({
@@ -142,7 +153,7 @@ include ./../components/form/inputs/input-text.pug
         // Начало слайда #5
         .swiper-slide
             +block-wrapper({
-                bg: 'grey'
+                alignItems: 'center'
             })
                 +set-block('social-buttons')
                     +social-btn-block([
@@ -181,14 +192,11 @@ include ./../components/form/inputs/input-text.pug
                                 name: 'email',
                                 value: ''
                             })
-                        +submit-btn({
-                            icon: 'fas fa-envelope',
-                            aboveInput: true
-                        })
-                        
-            div.footer
-                p.footer__text
-                    | © 2013  
-                    a.footer__author-link(href="#") Perth.
-                    |  Breeding pixels since the naughties.
+                                +submit-btn({
+                                    icon: 'fas fa-envelope',
+                                    aboveInput: true
+                                })
+            +footer({
+                text: '© 2013 <a href="#">Perth.</a> Breeding pixels since the naughties.'
+            })
         // Конец слайда #5                                

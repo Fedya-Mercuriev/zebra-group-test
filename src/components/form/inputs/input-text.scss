@@ -1,0 +1,36 @@
+.text-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.text-input-label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #545454;
+    font-style: italic;
+    @include media(map-deep-get($devices, "mobile-l")) {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 25px;
+    }
+}
+
+.text-input {
+    display: block;
+    width: 217px;
+    padding: 16px 55px 16px 20px;
+    border: 0px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-style: italic;
+    color: #7e7e7e;
+    outline-style: none;
+    outline-color: transparent;
+    &::placeholder {
+        color: #d3d3d3
+    }
+    @include media(map-deep-get($devices, "mobile-l")) {
+        display: inline-block;
+    }
+}

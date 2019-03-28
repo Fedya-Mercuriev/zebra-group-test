@@ -1,0 +1,23 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 0 40px 0;
+    background-color: #ffffff;
+    &__text {
+        max-width: $max-container-width;
+        @include reset-pad-marg();
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.75em;
+        font-weight: 400;
+        color: #545454;
+        & a {
+            font-size: 1em;
+            color: #6dc5ea;
+            font-weight: 400;
+            text-decoration: none;
+        }
+    }
+}

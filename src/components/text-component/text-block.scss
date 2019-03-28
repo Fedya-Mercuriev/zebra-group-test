@@ -1,0 +1,64 @@
+.hero-text {
+    @include reset-pad-marg();
+    padding: 0 0.5em;
+    margin-bottom: 56px;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    @include media(map-deep-get($devices, "desktop")) {
+        padding: 0 0.285714285714286em 0 0;
+        font-size: 2.1875em;
+        line-height: 1.4;
+        text-align: inherit;
+    }
+    & em {
+        font-weight: 500;
+    }
+}
+
+.text-block-with-ribbon {
+    padding: 0 1em;
+    border-top: 6px solid $text-ribbon-color;
+    margin-bottom: 52px;
+    &__text-content {
+        @include text-default-style();
+        font-style: italic;
+        @include media(map-deep-get($devices, "desktop")) {
+            margin-left: 19px;
+        }
+    }
+    @include media(map-deep-get($devices, "desktop")) {
+        padding: 0;
+        border-top: 0;
+        border-left: 6px solid $text-ribbon-color;
+        margin-bottom: 72px;
+    }
+}
+
+.exphasized-text-block {
+    display: inline-block;
+    @include text-default-style();
+    padding: 0 1em;
+    margin-bottom: 18px;
+    font-weight: 500;
+    color: $emphasized-text-color;
+    @include media(map-deep-get($devices, "desktop")) {
+        padding-left: 0;
+        padding-right: 2em;
+        margin-bottom: 38px;
+    }
+}
+
+.text-block {
+    @include reset-pad-marg();
+    padding: 0 1em;
+    margin-bottom: 2.125em;
+    @include text-default-style();
+    text-align: center;
+    @include media(map-deep-get($devices, "desktop")) {
+        padding-left: 0;
+        padding-right: 3em;
+        text-align: inherit;
+    }
+}

@@ -6,7 +6,8 @@ mixin input-text(options)
     //- @labelText (устанавливает текст для элемента label),
     //- @placeholder (устанавливает текст для placeholder-а),
     //- @name и @value (устанавливают значения для аттрибутов name/value),
-    label(for=options.purpose)= options.labelText
+    label.text-input-label(for=options.purpose)= options.labelText
     - baseClassName = 'text-input'
     div(class=`${baseClassName}-wrapper`)
         input(class=baseClassName type=options.type id=options.purpose placeholder=options.placeholder name=options.name value=options.value)
+        block

@@ -1,42 +1,35 @@
 - blocks = {};
 
-mixin block-wrapper(options, isHero= false)
-    //- Свойства opions:
-    //- @bg (задает класс, по которому блоку будет применяться определенный фон)
+mixin block-wrapper(options, isMain= false)
+    //- Свойства options:
+    //- @textOrientation (опреляет выравнивание элементов внутри контейнера (лево-право-центр))
+    //- @slideNumber (устанавливает номер слайда; по нему можно индивидуально задать ширину контента)
+    //- @alignItems (выравнивает элементы (лево-право-центр))
     //- @title (загловок для блока)
-    //- Свойство @hero определеяет является ли блок главным на странице
+    //- @boldText (некоторые заголовки жирным шрифтом; этот параметр обозначает жирным ли шрифтом написан заголовок)
+    //- @textColor (задает цвет текста (темный или светлый))
+    //- Свойство @isMain определеяет является ли блок главным на странице
     block
-    if (isHero)
-        - baseClassName = 'hero-block';
-        - classList = (options.textColor === 'light') ? `${baseClassName} ${baseClassName}--light-text` : baseClassName;
-        - classList += ` ${baseClassName}--bg-${options.bg}`
-        //- Структура для главного блока  
-        div(class= classList)
-            .block-content-wrapper
-                if (options.title)
-                    .block-header   
-                        h1.hero-block__title= options.title
-                .hero-block__content
-                    - for (var block in blocks)
-                        - blocks[block]()
-                    //- В конце прохождения каждого цикла очищает объект с блоками 
-                    //- во избежание дублирования
-                    -blocks = {}
-    else
-        - baseClassName = 'slide-content';
-        - classList = (options.textColor === 'light') ? `${baseClassName} ${baseClassName}--light-text` : baseClassName;
-        - classList += ` ${baseClassName}--bg-${options.bg}`
-        //- Структура для основного блока
-        div(class= classList)
-            .block-content-wrapper
-                if (options.title)
-                    .block-header
-                        h2.slide-content__block-headline= options.title
-                .block-content
-                    - for (var block in blocks)
-                        - blocks[block]()
-                    -blocks = {}
+    //- Структура для основного блока
+    .swiper-slide__vertical-centrifier
+            //- vertical centrifier отвечает за вертикальное центрирование дочерних элементов
+            div(class=`block-content-wrapper slide-number-${options.slideNumber} block-content-wrapper--align-items-${options.alignItems}`)
+                //- block-content-wrapper задает максимальную ширину контентной области,
+                //- через slide-number-# > ... индивидуально задается ширина контента
+                - containerBaseClassName = 'block-content-wrapper__container';
+                - containerClassList = `${containerBaseClassName} ${containerBaseClassName}--${options.textColor}-text`
+                - containerClassList += (options.textOrientation) ? ` block-content-wrapper__container--align-text-${options.textOrientation}` : '';
+                div(class=containerClassList)
+                    //- block-content-wrapper__container выравнивает дочерние элементы (лево-право-центр)
+                    if (options.title)
+                        if (isMain)
+                            h1.main-block-title= options.title
+                        else
+                            h2.block-headline(class= (options.boldText) ? 'block-headline--bold' : '')= options.title
+                    .block-content
+                        - for (var block in blocks)
+                            - blocks[block]()
+                        -blocks = {}
     
-
 mixin set-block(key)
     - blocks[key] = this.block
