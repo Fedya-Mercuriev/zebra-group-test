@@ -1,111 +1,78 @@
-.hero-block {
-    display: table;
-    width: 100%;
-    height: 100%;
-    color: $dark-text-color;
-    text-align: center;
-    &__title {
-        @include reset-pad-marg();
-        padding: 0 0.5em;
-        margin-bottom: 59px;
-        font-size: 3em;
-        line-height: 100%;
-        font-family: "Blackjack", sans-serif;
-        @include media(map-deep-get($devices, "mobile-l")) {
-            font-size: 3.125em;
-        }
-        @include media(map-deep-get($devices, "tablet")) {
-            font-size: 4.375em;
-        }
-        @include media(map-deep-get($devices, "desktop")) {
-            padding: 0;
-        }
-    }
-    &__content {
-        max-width: $max-container-width;
-        margin: 0 auto;
-        text-align: center;
-        @include media(map-deep-get($devices, "desktop")) {
-            text-align: inherit;
-        }
-    }
-    &--light-text {
-        color: $light-text-color;
-    }
-    &--bg-blue {
-        background-color: $bg-blue;
-    }
-    &--bg-green {
-        background-color: $bg-green;
-    }
-    &--bg-grey {
-        background-color: $bg-grey;
-    }
-    &--bg-white {
-        background-color: $bg-white;
-    }
-    @include media(map-deep-get($devices, "desktop")) {
-        text-align: right;
-    }
-}
-
-.slide-content {
-    $block-base-class: 'slide-content';
-    display: table;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: $dark-text-color;
-    text-align: center;
-    @include media(map-deep-get($devices, "desktop")) {
-        text-align: inherit;
-    }
-    &__block-headline {
-        padding: 0 0.5em;
-        font-size: 1.8em;
-        color: $dark-title-color;
-        @include media(map-deep-get($devices, "desktop")) {
-            padding: 0;
-            font-size: 2.5em;
-        }
-    }
-    &--light-text {
-        .#{$block-base-class}__block-headline {
-            color: $light-text-color;
-            font-weight: 500;
-        }
-    }
-    &--bg-blue {
-        background-color: $bg-blue;
-    }
-    &--bg-green {
-        background-color: $bg-green;
-    }
-    &--bg-grey {
-        background-color: $bg-grey;
-    }
-    &--bg-white {
-        background-color: $bg-white;
-    }
-}
-
+// Стили дял обертки (устанавливает ширину, выравнивает дочерние элементы, выравнивает текст внутри дочерних элементов)
 .block-content-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.block-header {
     max-width: $max-container-width;
     margin: 0 auto;
-    text-align: center;
-    @include media(map-deep-get($devices, "desktop")) {
-        text-align: inherit;
+    // Правила для выравнивания дочерних элементов
+    &--align-items-left {
+        text-align: left
+    }
+    &--align-items-center {
+        text-align: center;
+    }
+    &--align-items-right {
+        text-align: right;
+    }
+    &__container {
+        display: inline-block;
+        // Правила для выравнивания текста дочерних элементов
+        &--align-text-left {
+            text-align: left;
+        }
+        &--align-text-center {
+            text-align: center;
+        }
+        &--align-text-right {
+            text-align: right;
+        }
+        &--light-text {
+            color: $light-text-color;
+        }
+        &--dark-text {
+            color: $dark-text-color;
+        }
     }
 }
 
+// Индивидуальные настройки ширины для контента с текстом
+.slide-number-2 {
+    .block-content-wrapper__container {
+        max-width: 570px;
+    }
+}
+
+.slide-number-3 {
+    .block-content-wrapper__container {
+        max-width: 406px;
+    }
+}
+
+// Стиль для заголовка главного блока
+.main-block-title {
+    @include reset-pad-marg();
+    margin-bottom: 59px;
+    font-size: 4.375em;
+    font-family: 'Blackjack', sans-serif;
+}
+
+// Стиль для обычного заголовка
+.block-headline {
+    @include reset-pad-marg();
+    margin-bottom: 49px;
+    padding: 0 0.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.8em;
+    color: $dark-title-color;
+    &--bold {
+        font-weight: 400;
+    }
+    @include media(map-deep-get($devices, "desktop")) {
+        padding: 0;
+        font-size: 2.5em;
+    }
+}
+
+// Стиль для контента блока
 .block-content {
     text-align: center;
     @include media(map-deep-get($devices, "desktop")) {
