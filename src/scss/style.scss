@@ -6,9 +6,11 @@
 @import "fa-assets/brands.scss";
 @import "../components/page-navigation/page-navigation.scss";
 @import "../components/block-wrapper/block-wrapper.scss";
+@import "../components/text-component/text-block.scss";
 html {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    font-size: 16px;
 }
 
 body {
