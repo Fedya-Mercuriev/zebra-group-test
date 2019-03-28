@@ -1,0 +1,19 @@
+.floating-action-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 59px;
+    z-index: 9998;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    color: #545454;
+    background-color: #f4f4f4;
+    outline-style: none;
+    outline-color: transparent;
+    cursor: pointer;
+    &:hover {
+        color: #f8f8f8;
+        background-color: #828282;
+    }
+}
