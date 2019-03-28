@@ -69,3 +69,40 @@ body {
 .social-buttons-wrapper {
     margin-bottom: 67px;
 }
+
+.aside-img {
+    position: absolute;
+    bottom: 100px;
+    height: 100px;
+    padding-right: 50px;
+    background-repeat: no-repeat;
+    &--iphone {
+        @include media(map-deep-get($devices, "desktop")) {
+            left: 50%;
+            bottom: -212px;
+            transform: translateX(-210%);
+            height: 480px;
+            padding-right: 229px;
+            background-image: url('../img/bg-phone.svg');
+        }
+    }
+    &--ipad {
+        @include media(map-deep-get($devices, "desktop")) {
+            right: 0;
+            bottom: 0;
+            height: 499px;
+            padding-right: 338px;
+            background-image: url('../img/bg-ipad.svg');
+        }
+    }
+    &--devices {
+        @include media(map-deep-get($devices,
+        "desktop")) {
+            bottom: 0;
+            left: 0;
+            height: 367px;
+            padding-right: 758px;
+            background-image: url('../img/bg-devices.svg')
+        }
+    }
+}
