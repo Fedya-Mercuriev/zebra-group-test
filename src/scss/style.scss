@@ -10,6 +10,9 @@
 @import "../components/buttons/floating-action-btn/floating-action-btn.scss";
 @import "../components/buttons/regular-btn/regular-btn.scss";
 @import "../components/buttons/social-btn/social-btn.scss";
+@import "../components/buttons/submit-btn/submit-btn.scss";
+@import "../components/form/form.scss";
+@import "../components/form/inputs/input-text.scss";
 html {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -17,6 +20,7 @@ html {
 }
 
 body {
+    min-width: 320px;
     padding-top: 9px;
 }
 
