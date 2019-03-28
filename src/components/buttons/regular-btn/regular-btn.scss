@@ -1,0 +1,33 @@
+.regular-btn {
+    $btn-base-class: 'regular-btn';
+    display: inline-block;
+    padding: 21px 29px 21px 27px;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    &--color-white {
+        border: 2px solid #ffffff;
+        color: #ffffff;
+    }
+    &--color-green {
+        border: 2px solid #14af8f;
+        color: #14af8f;
+    }
+    &--color-pink {
+        border: 2px solid #ea4c89;
+        color: #ea4c89;
+    }
+    &__text {
+        display: inline-block;
+        margin-right: 11px;
+        // font-size: 15px;
+    }
+    &:hover {
+        text-decoration: underline;
+        .#{$btn-base-class}__text {
+            text-decoration: underline;
+        }
+    }
+}
