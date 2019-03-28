@@ -3,8 +3,10 @@
     width: 100%;
     height: 100%;
     color: $dark-text-color;
+    text-align: center;
     &__title {
         @include reset-pad-marg();
+        padding: 0 0.5em;
         margin-bottom: 59px;
         font-size: 3em;
         line-height: 100%;
@@ -15,13 +17,16 @@
         @include media(map-deep-get($devices, "tablet")) {
             font-size: 4.375em;
         }
+        @include media(map-deep-get($devices, "desktop")) {
+            padding: 0;
+        }
     }
     &__content {
         max-width: $max-container-width;
         margin: 0 auto;
         text-align: center;
         @include media(map-deep-get($devices, "desktop")) {
-            text-align: right;
+            text-align: inherit;
         }
     }
     &--light-text {
@@ -39,17 +44,31 @@
     &--bg-white {
         background-color: $bg-white;
     }
+    @include media(map-deep-get($devices, "desktop")) {
+        text-align: right;
+    }
 }
 
 .slide-content {
     $block-base-class: 'slide-content';
-    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     color: $dark-text-color;
     text-align: center;
     @include media(map-deep-get($devices, "desktop")) {
-        text-align: right;
+        text-align: inherit;
+    }
+    &__block-headline {
+        padding: 0 0.5em;
+        font-size: 1.8em;
+        color: $dark-title-color;
+        @include media(map-deep-get($devices, "desktop")) {
+            padding: 0;
+            font-size: 2.5em;
+        }
     }
     &--light-text {
         .#{$block-base-class}__block-headline {
@@ -83,6 +102,13 @@
     margin: 0 auto;
     text-align: center;
     @include media(map-deep-get($devices, "desktop")) {
-        text-align: right;
+        text-align: inherit;
+    }
+}
+
+.block-content {
+    text-align: center;
+    @include media(map-deep-get($devices, "desktop")) {
+        text-align: inherit;
     }
 }
