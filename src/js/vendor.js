@@ -23,7 +23,6 @@ $(document).ready(() => {
         },
         on: {
             transitionEnd() {
-                const btnClass = scrollTopBtn.attr('class').split(' ')[0];
                 if (this.realIndex === this.slides.length - 1) {
                     scrollTopBtn.show();
                 } else {
