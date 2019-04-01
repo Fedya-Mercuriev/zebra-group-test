@@ -81,7 +81,7 @@ module.exports = (_, argv) => {
                 allChunks: true
             }),
             new HtmlWebpackPlugin({
-                filename: 'index.html',
+                filename: '../index.html',
                 inject: 'head',
                 hash: true,
                 template: 'src/index.pug',
