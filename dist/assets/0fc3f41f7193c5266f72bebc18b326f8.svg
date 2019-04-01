@@ -1,0 +1,120 @@
+<svg id="devices" xmlns="http://www.w3.org/2000/svg" width="758.344" height="427.5" viewBox="0 0 758.344 427.5">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #e8ebf0;
+      }
+
+      .cls-1, .cls-10, .cls-13, .cls-14, .cls-15, .cls-2, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #d8dbe1;
+      }
+
+      .cls-3, .cls-6 {
+        fill: #474e5d;
+      }
+
+      .cls-4 {
+        fill: #70c6eb;
+      }
+
+      .cls-11, .cls-5 {
+        fill: #a5a5a5;
+      }
+
+      .cls-7 {
+        fill: #a5a4a4;
+      }
+
+      .cls-8 {
+        fill: #c0c2c6;
+      }
+
+      .cls-9 {
+        fill: #f79231;
+      }
+
+      .cls-10 {
+        fill: #fee9a3;
+      }
+
+      .cls-12, .cls-14 {
+        fill: #f6f6f6;
+      }
+
+      .cls-13 {
+        fill: #39dcc9;
+      }
+
+      .cls-15 {
+        fill: #f3787a;
+      }
+    </style>
+  </defs>
+  <g id="imac">
+    <path class="cls-1" d="M106.193,1860.76H575v50.2a11.154,11.154,0,0,1-11.157,11.16H117.333a11.154,11.154,0,0,1-11.157-11.16v-39.05C106.176,1865.75,106.193,1860.76,106.193,1860.76Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-1" d="M286.819,1922.45s-3.124,43.51-7.029,43.29c0,0-22.426,3.24-19.971,4.13,0,0-2.12,1.34,9.037,1.56H412.112s9.372,0.34,8.033-1.78c0,0-3.693-2.11-20.317-3.9,0,0-3.12,1.66-6.578-43.63Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-2" d="M286.805,1922.12H393.25l0.446,9.05H286.141Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-3" d="M117.333,1584.5h446.51A11.161,11.161,0,0,1,575,1595.66v283.17H106.193s-0.017-4.99-.017-11.16V1595.66A11.161,11.161,0,0,1,117.333,1584.5Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-4" d="M126.259,1603.25h429.1v257.06h-429.1V1603.25Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-5" d="M340.923,1590.52a3.125,3.125,0,1,1-3.124,3.12A3.124,3.124,0,0,1,340.923,1590.52Z" transform="translate(0 -1584.5)"/>
+    <circle class="cls-6" cx="340.469" cy="314.845" r="11.156"/>
+  </g>
+  <g id="macbook_retina" data-name="macbook retina">
+    <path class="cls-3" d="M-30.572,1787.08H266.907a10.339,10.339,0,0,1,10.336,10.34V1996.7a10.339,10.339,0,0,1-10.336,10.34H-30.572a10.339,10.339,0,0,1-10.336-10.34V1797.42A10.339,10.339,0,0,1-30.572,1787.08Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-7" d="M118.064,1791.93a1.86,1.86,0,1,1-1.86,1.86A1.859,1.859,0,0,1,118.064,1791.93Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-1" d="M-78.111,1999.8s-0.48,12.2,37.206,12.2H277.04s37.009-.43,37.009-12.2H-78.111Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-8" d="M90.776,1999.8s0.672,4.24,3.979,4.24h46.771a5.079,5.079,0,0,0,4.083-4.24H90.776Z" transform="translate(0 -1584.5)"/>
+    <path class="cls-9" d="M-30.985,1799.28h298.1v186.05h-298.1V1799.28Z" transform="translate(0 -1584.5)"/>
+  </g>
+  <g id="ipad">
+    <path id="device" class="cls-3" d="M461.957,1749.6H618.934a7.826,7.826,0,0,1,7.82,7.82v229.02a7.819,7.819,0,0,1-7.82,7.82H461.957a7.819,7.819,0,0,1-7.819-7.82V1757.42A7.825,7.825,0,0,1,461.957,1749.6Z" transform="translate(0 -1584.5)"/>
+    <path id="overlay" class="cls-10" d="M465.378,1771.5H615.611v200.96H465.378V1771.5Z" transform="translate(0 -1584.5)"/>
+    <circle id="camera" class="cls-11" cx="540.329" cy="176.2" r="1.391"/>
+    <circle id="back_button" data-name="back button" class="cls-12" cx="540.391" cy="399.14" r="5.797"/>
+  </g>
+  <g id="ipad_mini" data-name="ipad mini">
+    <path id="device-2" data-name="device" class="cls-3" d="M645.489,1799.6h107.5a5.357,5.357,0,0,1,5.355,5.36v156.83a5.349,5.349,0,0,1-5.355,5.35h-107.5a5.349,5.349,0,0,1-5.355-5.35V1804.96A5.357,5.357,0,0,1,645.489,1799.6Z" transform="translate(0 -1584.5)"/>
+    <path id="overlay-2" data-name="overlay" class="cls-13" d="M647.832,1814.6H750.713v137.62H647.832V1814.6Z" transform="translate(0 -1584.5)"/>
+    <circle id="camera-2" data-name="camera" class="cls-11" cx="699.172" cy="222.705" r="0.953"/>
+    <circle id="back_button-2" data-name="back button" class="cls-12" cx="699.204" cy="375.375" r="3.984"/>
+  </g>
+  <g id="iphone5">
+    <path id="device-3" data-name="device" class="cls-3" d="M601.14,1846.27h52.93A10.332,10.332,0,0,1,664.4,1856.6v135.04a10.332,10.332,0,0,1-10.328,10.33H601.14a10.332,10.332,0,0,1-10.328-10.33V1856.6A10.332,10.332,0,0,1,601.14,1846.27Z" transform="translate(0 -1584.5)"/>
+    <path id="camera-3" data-name="camera" class="cls-7" d="M627.541,1852.6a1.355,1.355,0,1,1-1.356,1.36A1.358,1.358,0,0,1,627.541,1852.6Z" transform="translate(0 -1584.5)"/>
+    <path id="speaker" class="cls-7" d="M621.989,1858.41h10.974a1.355,1.355,0,1,1,0,2.71H621.989A1.355,1.355,0,1,1,621.989,1858.41Z" transform="translate(0 -1584.5)"/>
+    <path id="back_button-3" data-name="back button" class="cls-14" d="M627.476,1984.03a6.715,6.715,0,1,1-6.713,6.71A6.715,6.715,0,0,1,627.476,1984.03Z" transform="translate(0 -1584.5)"/>
+    <path id="overlay-3" data-name="overlay" class="cls-15" d="M595.2,1867.71h64.549v112.96H595.2V1867.71Z" transform="translate(0 -1584.5)"/>
+  </g>
+</svg>
